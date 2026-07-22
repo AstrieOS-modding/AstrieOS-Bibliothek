@@ -1,2 +1,3 @@
 # AstrieOS-Bibliothek
-Den Hauptbibliothek für open source mods/addons!
+Herzlich willkommen zur AstireOS bibliothek!
+<br> Auf diese Repo dass du kannst hochladen dein Jar datein zur Featured!
