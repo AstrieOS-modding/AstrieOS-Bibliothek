@@ -75,7 +75,6 @@ body.skibidi-aus {
 .Header-content {
     position: relative;
     overflow: hidden;
-    width: 100%;
     height: 480px;
     padding: 120px 8px;
     border-bottom-left-radius: 48px;
