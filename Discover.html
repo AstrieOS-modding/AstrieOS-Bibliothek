@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AstrieOS Bibliothek!</title>
+        <link rel="icon" href="Res/Bild/Logo/AddText_07-03-07.27.32.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="Discover.css">
+        <link rel="stylesheet" href="Res/Font/font.css">
+    </head>
+    <body>
+        <div class="Navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite!</a></li>
+                    <li><a href="Discover.html">Discover content!</a></li>
+                    <li><a>Docs!</a></li>
+                    <li><a href="https://github.com/AstrieOS-modding/AstrieOS-Bibliothek">Github repo!</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="Navbar-unter"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="Discover-content">
+            <div class="Discover-header">
+                <h2>Discover!</h2>
+                <p>Alles sind hier zur durchsurfen und herunterladen!</p>
+            </div>
+            <div class="Discover-tool">
+                <div class="Discover-suchen"><input type="text" placeholder="Hey! klicke mich zur suchen!"></div>
+            </div>
+            <div class="Discover-tools">
+                <div class="Discover-filter" onclick="Ds_filter()"><img class="Discover-img" src="Res/Bild/Icon/Desktop/Musikplayer/keyboard_arrow_down_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Sortieren nach: <span>Relevance</span></p></div>
+                <div class="Ds_filtermenu" id="filtermenu">
+                    <div class="dropdown-item"><p>Relevance</p></div>
+                    <div class="dropdown-item"><p>Herunterladen</p></div>
+                    <div class="dropdown-item"><p>Folgenen</p></div>
+                    <div class="dropdown-item"><p>Veröffentlich</p></div>
+                    <div class="dropdown-item"><p>Neues update</p></div>
+                </div>
+                <div class="Discover-mods-und-addons" onclick="Ds_modandaddons()"><img class="Discover-img" src="Res/Bild/Icon/Desktop/Musikplayer/keyboard_arrow_down_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Mods und addons!</p></div>
+                <div class="Ds_mods-und-addons" id="Mods-und-addons">
+                    <div class="dropdown-item"><p>Mods und addons</p></div>
+                    <div class="dropdown-item"><p>Nur mods</p></div>
+                    <div class="dropdown-item"><p>Nur addons</p></div>
+                </div>
+                <div class="Discover-grid-oder-list" onclick="Ds_grid()"><img class="Discover-img" src="Res/Bild/Icon/Desktop/Musikplayer/keyboard_arrow_down_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Liste: <span>Grid!</span></p></div>
+                <div class="Ds_grid-oderlist" id="Grid-oder-list">
+                    <div class="dropdown-item"><p>Grid (4x4)</p></div>
+                    <div class="dropdown-item"><p>Längere grid (6x6)</p></div>
+                    <div class="dropdown-item"><p>Liste</p></div>
+                </div>
+            </div>
+        </div>
+    <script src="Java/toggle.js"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Only intercept internal links
+                    if (link.hostname === window.location.hostname) {
+                    e.preventDefault();
+                    document.body.classList.add('skibidi-aus');
+                    setTimeout(() => {
+                        window.location.href = link.href;
+                    }, 300);
+                    }
+                });
+            });
+    </script>
+    </body>
+</html>

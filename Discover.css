@@ -1,0 +1,160 @@
+::selection {
+    background: transparent;
+}
+
+.Discover-content {
+    margin: auto;
+    width: 90%;
+}
+
+.Discover-header {
+    line-height: 0.2;
+    animation-name: Cool-name;
+    animation-duration: 0.4s;
+}
+
+@keyframes Cool-name {
+    from { opacity: 0; transform: translateY(8px);}
+    to { opacity: 1; transform: translateY(0px);}
+}
+
+.Discover-header h2 {
+    font-size: 2rem;
+    color: #EBC2FC;
+    text-decoration: underline;
+}
+
+.Discover-header p {
+    opacity: 0.5;
+}
+
+.Discover-tools {
+    width: 100%;
+    padding: 14px 8px;
+    border-radius: 12px;
+    background-color: #523f5e;
+}
+
+.Discover-suchen {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 14px 8px;
+    border-radius: 12px;
+    background-color: #523f5e;
+}
+
+.Discover-suchen input[type="text"] {
+    height: 48px;
+    width: 100%;
+    padding-left: 18px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    background-color: transparent;
+    font-family: Google-sans;
+    font-size: 1rem;
+    color: #ffffff91;
+    box-shadow: 0 0 0 2px #ffffff2b;
+    box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+input[type="text"]::placeholder {
+    color: #ffffff91;
+}
+
+.Discover-suchen input[type="text"]:focus {
+    height: 68px;
+    color: #EBC2FC;
+    box-shadow: 0 0 0 2px #EBC2FC;
+    background-color: #33273a;
+}
+
+.Discover-filter, .Discover-mods-und-addons, .Discover-grid-oder-list {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border-radius: 12px;
+    background-color: #33273a79;
+    cursor: pointer;
+    
+}
+
+.Discover-filter p, .Discover-mods-und-addons p, .Discover-grid-oder-list p {
+    animation-name: Cool-name2;
+    animation-duration: 0.4s;
+}
+
+.Discover-filter span, .Discover-grid-oder-list span {
+    color: #EBC2FC;
+    font-weight: 600;
+}
+
+.Discover-filter:hover, .Discover-mods-und-addons:hover, .Discover-grid-oder-list:hover {
+    box-shadow: 0 0 0 2px #EBC2FC;
+    background-image: linear-gradient(to top, #ebc2fc31, transparent);
+    background-color: #33273a;
+}
+
+@keyframes Cool-name2 {
+    from {opacity: 0; transform: translateX(-8px);}
+    to {opacity: 1; transform: translateX(0px);}
+}
+
+.Discover-filter img, .Discover-mods-und-addons img, .Discover-grid-oder-list img {
+    width: 32px;
+    float: left;
+}
+
+.Ds_filtermenu.open, .Ds_mods-und-addons.open, .Ds_grid-oderlist.open {
+    display: block;
+}
+
+.dropdown-item {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 4px;
+    padding-left: 18px;
+    padding-bottom: 4px;
+    border-radius: 12px;
+    border-left: solid 4px #ffffff00;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    border-left: solid 4px #ffffff;
+    background-image: linear-gradient(to right, #ebc2fca2, transparent);
+}
+
+.Ds_filtermenu, .Ds_mods-und-addons, .Ds_grid-oderlist {
+    display: none;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 14px 8px;
+    border-radius: 12px;
+    background-color: #33273a;
+}
+
+.Ds_filtermenu:hover, .Ds_mods-und-addons:hover, .Ds_grid-oderlist:hover {
+    box-shadow: 0 0 0 2px #EBC2FC;
+}
+
+@media (max-width: 768px) {
+    .Discover-content {
+        
+        width: 95%;
+    }
+
+    .Discover-header {
+        line-height: 1;
+    }
+
+    .Discover-header h2 {
+        line-height: 0;
+    }
+}

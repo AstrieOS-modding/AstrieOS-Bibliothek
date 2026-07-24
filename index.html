@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AstrieOS Bibliothek!</title>
+        <link rel="icon" href="Res/Bild/Logo/AddText_07-03-07.27.32.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="Res/Font/font.css">
+    </head>
+    <body class="skibidi">
+        <div class="Navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite!</a></li>
+                    <li><a href="Discover.html">Discover content!</a></li>
+                    <li><a>Docs!</a></li>
+                    <li><a href="https://github.com/AstrieOS-modding/AstrieOS-Bibliothek">Github repo!</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="Navbar-unter"></div>
+        <div class="Header-content">
+            <video class="Hintergrund" autoplay loop muted playinline><source src="https://assets.ppy.sh/media/landing.mp4"></video>
+            <div class="Header-header">
+                <h2>AstrieOS Bibliothek!</h2>
+                <div class="Header-text">                    
+                    <p>Eines cooles platz für open source mods und addons!</p>
+                </div>
+            </div>
+            <div class="Header-button">
+                <button class="Besuchen-mods" data-page="Discover.html">Discover mods!</button>
+                <button class="Hilfe-docs">Ich brauche eine Hilfe!</button>
+            </div>
+        </div>
+        <br>
+        <div class="Homepage-content">
+            <div class="Homepage-header">
+                <h2>Hier gibt es <span id="Homepage-counter">0</span> mods und addons existieren!</h2>
+                <p style="opacity: 0.5;">Ready to install und source code!</p>
+            </div>
+            <div class="Bibliothek-featured"></div>
+            <div class="Homepage-header">
+                <h2>"Wir" haben cool unsere Api!</h2>
+                <p style="opacity: 0.5;">That's right! "wir" haben unsere und stabil (oder buggy) api erstellen!</p>
+                <br>
+                <div class="Homepage-featured">
+                    <div class="Homepage-item">
+                        <img src="https://media1.tenor.com/m/YGV1m0f5oOAAAAAC/homer-simpson-hide-in-shrubs.gif">
+                        <h3>Einfach und schnell!</h3>
+                        <p>Unsere docs ist so einfach dass das Fisch kann verstehen!</p>
+                    </div>
+                    <div class="Homepage-item">
+                        <img src="https://media1.tenor.com/m/WjzC2tnnrG8AAAAd/mane-im-dead.gif">
+                        <h3>"Gutes" leistung und flüssig!</h3>
+                        <p>Unsere Api ist sooooo flüssig genung als lange niemand backfilp und kaboom!</p>
+                    </div>
+                    <div class="Homepage-item">
+                        <img src="https://media1.tenor.com/m/YtxirAHPxrgAAAAd/boom-boom-cat-boom.gif">
+                        <h3>Sind open source!</h3>
+                        <p>Unsere Api ist open source zur jedes kann lessen und helfen!</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="Homepage-header">
+                <h2>Schauen den kunden sagen!</h2>
+                <p style="opacity: 0.5;">100% totally legit kunden</p>
+                <br>
+                <div class="Homepage-featured">
+                    <div class="Homepage-item">
+                        <img src="https://media.tenor.com/Wlu-ZlnW7QYAAAAi/no-dislike.gif">
+                        <h3>Das ist den schlimmsten design alle zeiten!</h3>
+                        <p>Zur vielen frabe und joke!!!! <br> - Random dude (vermisst)</p>
+                    </div>
+                    <div class="Homepage-item">
+                        <img src="https://media1.tenor.com/m/_hUq1BSUsiMAAAAC/cat-cute.gif">
+                        <h3>Habe vielen spaß mit mein familien!</h3>
+                        <p>Meine familie sind tot bittle rettet mich! <br> - Jeff</p>
+                    </div>
+                    <div class="Homepage-item">
+                        <img src="https://media1.tenor.com/m/TsmJ8yVex4kAAAAC/what-the-dog-dog-loading.gif">
+                        <h3>wow is very cool</h3>
+                        <p>warum dass website exist? (hilfe mir bittle) <br> - Nochmal Jeff</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="footer-content">
+            <div class="footer-header">
+                <h2>AstireOS!*</h2>
+                <p>Erstellt von: Mayi-oi!</p>
+            </div>
+        </div> -->
+        <script>
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Only intercept internal links
+                    if (link.hostname === window.location.hostname) {
+                    e.preventDefault();
+                    document.body.classList.add('skibidi-aus');
+                    setTimeout(() => {
+                        window.location.href = link.href;
+                    }, 300);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.Besuchen-mods').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.body.style.opacity = '0';
+                    document.body.style.transition = 'opacity 0.2s ease-out';
+                    
+                    setTimeout(() => {
+                    window.location.href = this.getAttribute('data-page');
+                    }, 300);
+                });
+            });
+        </script>
+    </body>
+</html>
