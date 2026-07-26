@@ -212,12 +212,10 @@ input[type="text"]::placeholder {
 
 .Info-id {
     opacity: 0.4;
-    font-family: Jetbrains;
     font-weight: 400;
 }
 
 .id {
-    font-family: Jetbrains;
     font-weight: 600;
 }
 
