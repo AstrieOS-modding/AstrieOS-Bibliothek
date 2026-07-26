@@ -2,6 +2,23 @@
     background: transparent;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: Google-sans;
+    background-color: #382b40;
+    color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+body.skibidi-aus {
+    pointer-events: none;
+    opacity: 0;
+}
+
 .Discover-content {
     margin: auto;
     width: 90%;

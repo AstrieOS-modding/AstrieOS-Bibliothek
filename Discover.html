@@ -86,7 +86,7 @@
                 </div>
                 <div class="Modsinfo-button">
                     <button class="Mod-fav"><img src="Res/Bild/Icon/Desktop/Status/favorite_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></button>
-                    <button class="Mod-Herunterladen"><img src="Res/Bild/Icon/Desktop/Status/download_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Herunterladen!</p></button>
+                    <button class="Mod-Herunterladen" onclick="Herunterladen()"><img src="Res/Bild/Icon/Desktop/Status/download_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Herunterladen!</p></button>
                     <button class="Mod-sourcecode"><img src="Res/Bild/Icon/Desktop/Status/code_xml_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Source code besuchen!</p></button>
                 </div>
                 <br>
@@ -94,11 +94,13 @@
             </div>
         </div>
     <script src="Java/Repoinfo.js"></script> <!-- Holt den README.md oder wichtige info von Github repo oder Gitlab repo -->
-    <script src="Java/filtersys.js"></script>
+    <script src="Java/jardatein.js"></script> <!-- Wann herunterladen wird convert zur .jar datein -->
+    <script src="Java/tools.js"></script>
     <script src="Java/toggle.js"></script>
     <script>
-        document.querySelectorAll('a').forEach(linyhlehe => {
+            document.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', (e) => {
+                    // Only intercept internal links
                     if (link.hostname === window.location.hostname) {
                     e.preventDefault();
                     document.body.classList.add('skibidi-aus');
