@@ -35,7 +35,7 @@
     background-color: #523f5e;
 }
 
-.Discover-suchen {
+.Discover-suchen, .Discover-results {
     margin-top: 8px;
     margin-bottom: 8px;
     width: 100%;
@@ -144,9 +144,222 @@ input[type="text"]::placeholder {
     box-shadow: 0 0 0 2px #EBC2FC;
 }
 
+.Discover-scroll {
+    overflow-y: scroll;
+    height: 480px;
+}
+
+.Discover-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 14px;
+    width: 97%;
+    margin: auto;
+}
+
+.Disocver-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 28px 8px;
+    border-radius: 12px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.Discover-icon {
+    opacity: 0.2;
+    margin-bottom: 12px;
+    width: 32px;
+}
+
+.Discover-banner {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.Disocver-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #33273a, transparent);
+    z-index: -1;
+}
+
+.Discover-info {
+    line-height: 0.4;
+}
+
+.Info-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.Info-small {
+    font-weight: 500;
+}
+
+.Info-id {
+    opacity: 0.4;
+    font-family: Jetbrains;
+    font-weight: 400;
+}
+
+.id {
+    font-family: Jetbrains;
+    font-weight: 600;
+}
+
+.Disocver-item:hover {
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.Modsinfo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000063;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.Modsinfo-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.Modsinfo-overlay.active .Modinfo-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.Modinfo-content {
+    width: 90%;
+    padding: 29px 8px;
+    border-radius: 12px;
+    background-color: #6e547c;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.Modinfo-repo {
+    margin: auto;
+    width: 98%;
+    padding: 29px 8px;
+    border-radius: 12px;
+    background-color: #33273a;
+}
+
+.Modinfo-background {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 99%;
+    height: 280px;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.Modinfo-hintegrund {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.Modsinfo-header {
+    padding-left: 14px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline;
+    line-height: 0.7
+}
+
+.Modsinfo-info {
+    padding-left: 14px;
+    line-height: 0.4;
+}
+
+.Mod-bold, .Mod-datum {
+    font-weight: 600;
+    color: #EBC2FC;
+}
+
+.Modsinfo-button {
+    width: 100%;
+    padding-left: 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.Mod-Herunterladen, .Mod-sourcecode {
+    display: flex;
+    gap: 8px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #EBC2FC;
+    color: #33273a;
+    font-family: Google-sans;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Mod-fav {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 12px;
+    background-color: #EBC2FC;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.Mod-Herunterladen img, .Mod-sourcecode img, .Mod-fav img {
+    width: 32px;
+    float: left;
+}
+
+.Mod-Herunterladen:hover, .Mod-sourcecode:hover, .Mod-fav:hover {
+    background-color: #33273a;
+    color: #EBC2FC;
+}
+
+/*
+.Modsinfo-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+*/
 @media (max-width: 768px) {
-    .Discover-content {
-        
+    .Discover-content {        
         width: 95%;
     }
 

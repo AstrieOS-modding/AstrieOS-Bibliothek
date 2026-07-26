@@ -26,3 +26,25 @@
     font-weight: 700;
     font-display: swap;
 }
+
+/* Jetbrains */
+@font-face {
+      font-family: Jetbrains;
+      src: url(Res/Font/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+      font-weight: 400;
+      font-display: swap;
+}
+
+@font-face {
+      font-family: Jetbrains;
+      src: url(Res/Font/JetBrains_Mono/static/JetBrainsMono-Medium.ttf);
+      font-weight: 500;
+      font-display: swap;
+}
+
+@font-face {
+      font-family: Jetbrains;
+      src: url(Res/Font/JetBrains_Mono/static/JetBrainsMono-SemiBold.ttf);
+      font-weight: 600;
+      font-display: swap;
+}

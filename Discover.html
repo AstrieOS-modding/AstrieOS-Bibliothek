@@ -55,12 +55,50 @@
                     <div class="dropdown-item"><p>Liste</p></div>
                 </div>
             </div>
+
+            <div class="Discover-results" id="results">
+                <div class="Discover-scroll">
+                    <div class="Discover-box">                  
+                        <div class="Disocver-item" onclick="Modsinfo()">
+                            <div class="Discover-icon"><img src="Res/Bild/Icon/Desktop/Status/github-fill.svg"></div>
+                            <div class="Discover-banner"><img src="Res/Bild/Hintergrund/RedcXca.png"></div>
+                            <div class="Discover-info">
+                                <span class="Info-bold">wow sehr coole mods!</span> <!-- Repo name vom Github oder Gitlab -->
+                                <p>von: <span class="Info-small">mayi-oi</span></p> <!-- Github oder Gitlab nutztername -->
+                                <p class="Info-id">Id: <span class="id">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
+        <div class="Modsinfo-overlay" id="modsinfo-overlay">
+            <div class="Modinfo-content">
+                <div class="Modinfo-background">
+                    <div class="Modinfo-hintegrund">
+                         <img class="Wallpaper" src="Res/Bild/Hintergrund/RedcXca.png">
+                    </div>
+                </div>
+                <div class="Modsinfo-header"><span class="Mod-header">wow sehr coolen mods title!</span></div>
+                <div class="Modsinfo-info">
+                    <p>Ersteller: <span class="Mod-bold">mayi-oi</span></p>
+                    <p>Veröfftenlich seit: <span class="Mod-datum">Juli.26.2026</span></p>
+                </div>
+                <div class="Modsinfo-button">
+                    <button class="Mod-fav"><img src="Res/Bild/Icon/Desktop/Status/favorite_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></button>
+                    <button class="Mod-Herunterladen"><img src="Res/Bild/Icon/Desktop/Status/download_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Herunterladen!</p></button>
+                    <button class="Mod-sourcecode"><img src="Res/Bild/Icon/Desktop/Status/code_xml_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Source code besuchen!</p></button>
+                </div>
+                <br>
+                <div class="Modinfo-repo"></div> <!-- Diese class nutzt den README.md oder anderen .md datein zurzeigen -->
+            </div>
+        </div>
+    <script src="Java/Repoinfo.js"></script> <!-- Holt den README.md oder wichtige info von Github repo oder Gitlab repo -->
+    <script src="Java/filtersys.js"></script>
     <script src="Java/toggle.js"></script>
     <script>
-        document.querySelectorAll('a').forEach(link => {
+        document.querySelectorAll('a').forEach(linyhlehe => {
                 link.addEventListener('click', (e) => {
-                    // Only intercept internal links
                     if (link.hostname === window.location.hostname) {
                     e.preventDefault();
                     document.body.classList.add('skibidi-aus');
